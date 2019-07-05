@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-06-27 19:50:25
- * @LastEditTime: 2019-07-04 15:48:04
+ * @LastEditTime: 2019-07-05 18:02:03
  * @LastEditors: jiannan.lv
  */
 .drag-item {
@@ -15,7 +15,11 @@
     line-height: 30px;
     text-align: center;
   }
-
+  &:hover {
+    .iconguanbi {
+      display: block;
+    }
+  }
   >i {
     background: #eef2f5;
     display: none;
@@ -97,6 +101,12 @@
     &.bottom {
       bottom: -8px;
       left: calc(50% - 4px);
+    }
+    &.iconguanbi {
+      background: transparent;
+      border: 1px solid transparent;
+      right: 15px;
+      top: 5px;
     }
   }
 }

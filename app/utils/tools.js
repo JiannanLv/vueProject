@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-05-09 11:11:47
- * @LastEditTime: 2019-07-04 15:48:28
+ * @LastEditTime: 2019-07-05 19:23:28
  * @LastEditors: jiannan.lv
  */
 // 生成唯一的id
@@ -44,6 +44,22 @@ export const renewalLineList = (lineList, dataList, params) => {
             };
         }
         tempLineList[key] = Object.assign({}, tempLineList[key], lineParams);
+    });
+    return tempLineList;
+}
+// 删除元素
+export const deleteItem = (data, id) => {
+    let tempDataList = { ...data };
+    delete tempDataList[id];
+    return tempDataList;
+}
+// 删除元素连的线
+export const deleteLine = (lineList, id) => {
+    let tempLineList = { ...lineList };
+    Object.keys(lineList).map(key => {
+        if(lineList[key].source.id === id || lineList[key].target.id === id) {
+            delete tempLineList[key];
+        }
     });
     return tempLineList;
 }

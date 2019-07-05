@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-06-27 19:47:34
- * @LastEditTime: 2019-07-05 11:21:18
+ * @LastEditTime: 2019-07-05 19:10:51
  * @LastEditors: jiannan.lv
  -->
 <template>
@@ -12,6 +12,7 @@
        @dblclick="(e) => this.selectItem(e, itemId)"
        @click="(e) => dragItemClick(e)" >
     <p>{{itemTempData.value}}</p>
+    <i class="iconfont iconguanbi" @click="() => deleteItem(itemId)" />
     <i v-for="item in iconArr"
        :key="item"
        :class="item"
@@ -79,7 +80,8 @@
         addLineId: "addLineId",
         updateLineInfo: "updateLineInfo",
         updateLineList: "updateLineList",
-        updateDataList: "updateDataList"
+        updateDataList: "updateDataList",
+        deleteDragItem: "deleteDragItem"
       }),
       // 阻止事件冒泡
       stopProps(event) {
@@ -241,6 +243,11 @@
           width: `${itemWidth}px`
         };
         return itemStyle;
+      },
+      // 删除拖拽元素
+      deleteItem(itemId) {
+        this.deleteDragItem(itemId);
+        console.log(itemId);
       },
       // -------------------------划线模块-------------------------
       linePointClick(e) {

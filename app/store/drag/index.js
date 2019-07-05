@@ -2,10 +2,10 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-06-27 17:24:38
- * @LastEditTime: 2019-07-05 11:22:07
+ * @LastEditTime: 2019-07-05 19:21:13
  * @LastEditors: jiannan.lv
  */
-import { _UUID, filterLine, renewalLineList } from 'app/utils/tools';
+import { _UUID, filterLine, renewalLineList, deleteItem, deleteLine } from 'app/utils/tools';
 // 初始化模块数据
 const defaultConfig = {
   value: "文本测试",
@@ -68,6 +68,10 @@ const actions = {
   addLineToLineList ({ state, commit, rootState }, lineItem) {
     commit('addLine', lineItem);
   },
+  // 删除拖拽元素
+  deleteDragItem({ state, commit, rootState }, id) {
+    commit('deleteItem', id);
+  },
   // ******************************线信息修改***************************
   // lineId修改
   addLineId ({ state, commit, rootState }, lineId) {
@@ -105,6 +109,12 @@ const mutations = {
     const tempDataList = { ...state.dataList };
     tempDataList[params.id] = params.data;
     state.dataList = tempDataList;
+  },
+  // 删除元素
+  deleteItem(state, id) {
+    const tempLineList = deleteLine(state.lineList, id);
+    state.dataList = deleteItem(state.dataList, id);
+    state.lineList = tempLineList;
   },
   // 添加线
   addLine (state, lineItem) {
