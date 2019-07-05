@@ -1,0 +1,25 @@
+/*
+ * @Author: jiannan.lv 
+ * @Date: 2019-05-09 11:51:28 
+ * @Last Modified by: jiannan.lv
+ * @Last Modified time: 2019-05-09 13:54:57
+ */
+#app {
+	height: 100%;
+	.content-wrap {
+		background: #f0f0f0;
+		height: calc(100% - 50px);
+		width: 100%;
+		> div {
+			float: left;
+			height: 100%;
+			position: relative;
+			&.content {
+				width: calc(100% - 250px);
+				&.content-active {
+					width: calc(100% - 55px);
+				}
+			}
+		}
+	}
+}

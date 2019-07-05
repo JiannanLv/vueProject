@@ -1,0 +1,28 @@
+/*
+ * @Author: jiannan.lv 
+ * @Date: 2019-05-09 11:29:10 
+ * @Last Modified by: jiannan.lv
+ * @Last Modified time: 2019-05-09 11:50:31
+ */
+.header {
+    background: #4065d9;
+    height: 50px;
+    position: relative;
+    .header-title {
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 200px;
+    }
+    .iconfont {
+        color: #fff;
+        cursor: pointer;
+        font-size: 36px;
+        left: 15px;
+        position: absolute;
+        top: 7px;
+    }
+}
