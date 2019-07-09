@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-06-27 13:47:03
- * @LastEditTime: 2019-07-04 15:45:40
+ * @LastEditTime: 2019-07-08 17:45:22
  * @LastEditors: jiannan.lv
  -->
 <template>
@@ -11,6 +11,8 @@
        ref="drawRegion"
        @click="drawRegionClick()">
     <div class="draw-region-content"
+         :style="`transform: scale(${scale}, ${scale})`"
+         style="transform-origin: 50% 50%;"
          @drop="onDrop"
          @dragover.prevent>
       <DragItem v-for="key in Object.keys(dataList)"
@@ -51,7 +53,8 @@
     computed: {
       ...mapGetters("drag", {
         dataList: "dataList",
-        lineList: "lineList"
+        lineList: "lineList",
+        scale: "scale"
       })
     },
     methods: {

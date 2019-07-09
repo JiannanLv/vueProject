@@ -2,11 +2,12 @@
  * @Description: 
  * @Author: jiannan.lv
  * @Date: 2019-06-27 13:47:09
- * @LastEditTime: 2019-07-03 15:21:43
+ * @LastEditTime: 2019-07-08 17:57:25
  * @LastEditors: jiannan.lv
  */
 .draw-region {
   height: 100%;
+  overflow: auto;
   position: relative;
   width: 100%;
   .draw-region-content {
