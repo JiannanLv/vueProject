@@ -1,0 +1,459 @@
+{
+  "code": "Rule_C_Stability_c",
+  "name": "����թ����-�ȶ���ָ��",
+  "resultMethodName": "add",
+  "ruleList": [
+    {
+      "name": "����֤��ƥ��",
+      "branch": [
+        {
+          "weight": 60,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_id",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB001",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "�ֻ��Ų�ƥ��",
+      "branch": [
+        {
+          "weight": 50,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_cell",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB002",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "�������䲻ƥ��",
+      "branch": [
+        {
+          "weight": 40,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_mail",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB003",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "�������֤��������һ��",
+      "branch": [
+        {
+          "weight": 30,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_id_name",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB004",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "������ƥ��",
+      "branch": [
+        {
+          "weight": 10,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_name",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB005",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "����֤���ֻ������䲻һ��",
+      "branch": [
+        {
+          "weight": 55,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_auth_key_relation",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "0"
+            ],
+            "type": "complex",
+            "methodName": "eq"
+          }
+        }
+      ],
+      "code": "CTB006",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "name": "�ȶ��Խϸ�",
+      "branch": [
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_id_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_cell_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_cell_firsttime",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_mail_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_name_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_tel_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        },
+        {
+          "weight": 20,
+          "condition": {
+            "params": [
+              {
+                "field": "stab_addr_num",
+                "classz": "Stability_c",
+                "type": "ref"
+              },
+              "5"
+            ],
+            "type": "complex",
+            "methodName": "le"
+          }
+        }
+      ],
+      "code": "CTB007",
+      "type": "simple",
+      "version": ""
+    },
+    {
+      "type": "tree",
+      "code": "CTB002",
+      "name": "����֤��ƥ��",
+      "version": "",
+      "branch": [
+        {
+          "condition": {
+            "type": "complex",
+            "method": "eq",
+            "params": [
+              {
+                "type": "ref",
+                "classz": "xxx",
+                "field": "sex"
+              },
+              "man"
+            ]
+          },
+          "branch": [
+            {
+              "condition": {
+                "type": "complex",
+                "method": "le",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 60
+            },
+            {
+              "condition": {
+                "type": "complex",
+                "method": "gt",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "condition": {
+            "type": "complex",
+            "method": "eq",
+            "params": [
+              {
+                "type": "ref",
+                "classz": "xxx",
+                "field": "sex"
+              },
+              "women"
+            ]
+          },
+          "branch": [
+            {
+              "condition": {
+                "type": "complex",
+                "method": "le",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 60
+            },
+            {
+              "condition": {
+                "type": "complex",
+                "method": "gt",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "card",
+      "code": "CTB003",
+      "name": "����֤��ƥ��",
+      "version": "",
+      "branch": [
+        {
+          "condition": {
+            "type": "complex",
+            "method": "eq",
+            "params": [
+              {
+                "type": "ref",
+                "classz": "xxx",
+                "field": "sex"
+              },
+              "man"
+            ]
+          },
+          "branch": [
+            {
+              "condition": {
+                "type": "complex",
+                "method": "le",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 60
+            },
+            {
+              "condition": {
+                "type": "complex",
+                "method": "gt",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "condition": {
+            "type": "complex",
+            "method": "eq",
+            "params": [
+              {
+                "type": "ref",
+                "classz": "xxx",
+                "field": "sex"
+              },
+              "women"
+            ]
+          },
+          "branch": [
+            {
+              "condition": {
+                "type": "complex",
+                "method": "le",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 60
+            },
+            {
+              "condition": {
+                "type": "complex",
+                "method": "gt",
+                "params": [
+                  {
+                    "type": "ref",
+                    "classz": "xxx",
+                    "field": "age"
+                  },
+                  "18"
+                ]
+              },
+              "value": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "version": "V1.0"
+}

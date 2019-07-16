@@ -1,0 +1,485 @@
+[
+  {
+    "salience": 10,
+    "remark": "",
+    "variableTreeNode": {
+      "nodeType": "variable",
+      "id": 0,
+      "left": {
+        "leftPart": {
+          "variableName": "taskName",
+          "variableLabel": "节点扭转",
+          "variableCategory": "参数",
+          "datatype": "String"
+        },
+        "type": "parameter"
+      },
+      "conditionTreeNodes": [
+        {
+          "nodeType": "condition",
+          "id": 1,
+          "value": {
+            "constantName": "录入",
+            "constantLabel": "录入",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "variableTreeNodes": [
+            {
+              "nodeType": "variable",
+              "id": 2,
+              "left": {
+                "leftPart": {
+                  "variableName": "entity_1.name",
+                  "variableLabel": "主卡申请人中文姓名",
+                  "variableCategory": "输入项",
+                  "datatype": "String"
+                },
+                "type": "variable"
+              },
+              "conditionTreeNodes": [
+                {
+                  "nodeType": "condition",
+                  "id": 3,
+                  "op": "NotNull",
+                  "actionTreeNodes": [
+                    {
+                      "nodeType": "action",
+                      "id": 4,
+                      "actions": [
+                        {
+                          "datatype": "String",
+                          "variableCategory": "输出项",
+                          "variableLabel": "流程流转节点",
+                          "variableName": "targetNodeName",
+                          "actionType": "VariableAssign",
+                          "type": "variable",
+                          "value": {
+                            "constantName": "复核",
+                            "constantLabel": "复核",
+                            "constantCategory": "流程流转节点",
+                            "valueType": "Constant"
+                          },
+                          "priority": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "value": {
+            "constantName": "复核",
+            "constantLabel": "复核",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "id": 5,
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 6,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "客户分类",
+                    "constantLabel": "客户分类",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 7,
+          "value": {
+            "constantName": "客户分类",
+            "constantLabel": "客户分类",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 8,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "数据处理",
+                    "constantLabel": "数据处理",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 9,
+          "value": {
+            "constantName": "数据处理",
+            "constantLabel": "数据处理",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 10,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "行内征信",
+                    "constantLabel": "行内征信",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 11,
+          "value": {
+            "constantName": "行内征信",
+            "constantLabel": "行内征信",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 12,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "欺诈调查",
+                    "constantLabel": "欺诈调查",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 13,
+          "value": {
+            "constantName": "欺诈调查",
+            "constantLabel": "欺诈调查",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 14,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "评分一",
+                    "constantLabel": "评分一",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 15,
+          "value": {
+            "constantName": "评分一",
+            "constantLabel": "评分一",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 16,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "电核",
+                    "constantLabel": "电核",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 17,
+          "value": {
+            "constantName": "电核",
+            "constantLabel": "电核",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 18,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "信用审查",
+                    "constantLabel": "信用审查",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 19,
+          "value": {
+            "constantName": "信用审查",
+            "constantLabel": "信用审查",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 20,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "评分二",
+                    "constantLabel": "评分二",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 21,
+          "value": {
+            "constantName": "评分二",
+            "constantLabel": "评分二",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 22,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "一级审批",
+                    "constantLabel": "一级审批",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 23,
+          "value": {
+            "constantName": "一级审批",
+            "constantLabel": "一级审批",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 24,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "二级审批",
+                    "constantLabel": "二级审批",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 25,
+          "value": {
+            "constantName": "二级审批",
+            "constantLabel": "二级审批",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 26,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "三级审批",
+                    "constantLabel": "三级审批",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "condition",
+          "id": 27,
+          "value": {
+            "constantName": "三级审批",
+            "constantLabel": "三级审批",
+            "constantCategory": "流程流转节点",
+            "valueType": "Constant"
+          },
+          "op": "Equals",
+          "actionTreeNodes": [
+            {
+              "nodeType": "action",
+              "id": 28,
+              "actions": [
+                {
+                  "datatype": "String",
+                  "variableCategory": "输出项",
+                  "variableLabel": "流程流转节点",
+                  "variableName": "targetNodeName",
+                  "actionType": "VariableAssign",
+                  "type": "variable",
+                  "value": {
+                    "constantName": "正常结束",
+                    "constantLabel": "正常结束",
+                    "constantCategory": "流程流转节点",
+                    "valueType": "Constant"
+                  },
+                  "priority": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

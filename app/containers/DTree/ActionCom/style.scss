@@ -1,0 +1,64 @@
+/*
+ * @Description: 
+ * @Author: jiannan.lv
+ * @Date: 2019-07-16 11:52:22
+ * @LastEditTime: 2019-07-16 13:17:45
+ * @LastEditors: jiannan.lv
+ */
+.action-com {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f0f0f0;
+  display: none;
+  position: absolute;
+  z-index: 2;
+
+  &.action-com-active {
+    display: block;
+  }
+
+  .arrow-wrap {
+    width: 0px;
+    height: 0px;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #ccc;
+    left: 38px;
+    position: absolute;
+    top: -10px;
+  }
+
+  .arrow {
+    width: 0px;
+    height: 0px;
+    border-width: 0 9px 9px;
+    border-style: solid;
+    border-color: transparent transparent #f0f0f0;
+    position: absolute;
+    top: 2px;
+    left: -9px;
+  }
+
+  >ul {
+    li {
+      cursor: pointer;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      width: 100px;
+
+      &:hover {
+        color: #fff;
+        background: #4065d9;
+      }
+
+      &:nth-of-type(1) {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}

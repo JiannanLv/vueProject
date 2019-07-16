@@ -2,7 +2,7 @@
  * @Description:
  * @Author: jiannan.lv
  * @Date: 2019-05-14 15:34:45
- * @LastEditTime: 2019-06-27 10:22:52
+ * @LastEditTime: 2019-07-09 11:44:27
  * @LastEditors: jiannan.lv
  */
 const navConfig = [{
@@ -10,7 +10,7 @@ const navConfig = [{
     path: '/home',
     name: '主页'
 }, {
-    icon: 'iconfont icontubiaoshu-copy',
+    icon: 'iconfont iconcharts',
     path: '/echarts',
     name: '图表'
 }, {
@@ -21,5 +21,9 @@ const navConfig = [{
     icon: 'iconfont icondrag',
     path: '/dragCon',
     name: '拖拽模块'
+}, {
+    icon: 'iconfont icontubiaoshu-copy',
+    path: '/dTree',
+    name: '决策树'
 }];
 export default navConfig;

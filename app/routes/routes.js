@@ -9,6 +9,7 @@ import Home from 'app/containers/Home/home.vue';
 import Echarts from 'app/containers/Echarts/echarts.vue';
 import ComCon from 'app/containers/ComCon/comCon.vue';
 import DragCon from 'app/views/Drag/dragCon.vue';
+import DecisionTree from 'app/views/DecisionTree/decisionTree.vue';
 // 作为Main组件的子页面展示并且在左侧菜单显示的路由写在appRouter里
 const appRouter = [
     {
@@ -32,8 +33,13 @@ const appRouter = [
         component: DragCon
     },
     {
+        path: '/dTree',
+        name: 'dTree',
+        component: DecisionTree
+    },
+    {
         path: '/',
-        redirect: 'dragCon'
+        redirect: 'dTree'
     }
     // {
     //     path: '', // 这个地址未定义的，定向到visualMonitor
